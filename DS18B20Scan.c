@@ -481,8 +481,9 @@ int ReadSensor(unsigned long long ID)
 
     ID &= 0x00FFFFFFFFFFFFFFULL;
     printf("%02llX-%012llX : ",ID & 0xFFULL, ID >>8);
-
-    printf("%02d bits  Temperature: %6.2f +/- %4.2f Celsius\n", resolution ,temperature, 0.0625 * (double)  (1<<(12 - resolution)));
+    
+    printf("%6.2f\n", resolution ,temperature, 0.0625 * (double)  (1<<(12 - resolution)));
+    // printf("%02d bits  Temperature: %6.2f +/- %4.2f Celsius\n", resolution ,temperature, 0.0625 * (double)  (1<<(12 - resolution)));
 
     return 1;
     }
