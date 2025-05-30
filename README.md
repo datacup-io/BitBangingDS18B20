@@ -1,6 +1,26 @@
 BitBangingDS18B20
 =================
 
+
+
+<b> Raspberry Pi 5  &  Pi4 4 *** update *** works on 64bits using gpiod</b><br>
+You will need to install gpiod<br>
+sudo apt-get install gpiod libgpiod-dev libgpiod-doc<br>
+
+ - DS18B20Pi5Scan.c &nbsp;&nbsp;&nbsp;&nbsp;Application to connect multiple DS18B20 on one GPIO.
+   (I need to check if it works on others Pi and on 32 bits)
+ - DS18B20Pi5V2.c  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application to Connect one DS18B20 per GPIO but read them together.
+ - configDS18B20Pi5.c &nbsp;&nbsp;Application to set bit resolution  of the DS18B20.
+ - Python module to be done later.
+
+    to compile
+    
+        gcc -o DS18B20Pi5Scan  DS18B20Pi5Scan.c -l gpiod
+
+   Still beta with gpiod. Not sure how it will perform with multiple GPIO connected. Still need to check if it works with old Pi.
+
+<b> Other Pi  method</b><br>
+
 Method to access the DS18B20 sensor using Rapsberry Pi GPIO
 
  - configDS18B20.c &nbsp;&nbsp;Application to set bit resolution  of the DS18B20.
